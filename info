@@ -1,0 +1,26 @@
+1. use su to start a root terminal
+2. use doas in place of sudo
+
+
+kkK
+alpine mirror:
+alpine.mirror.wearetriple.com
+
+manual mount for shared folder (needed for answer file):
+mount -t vboxsf [-o OPTIONS] sharename mountpoint
+
+answer file:
+https://wiki.alpinelinux.org/wiki/Using_an_answerfile_with_setup-alpine
+
+What I've done:
+0. .ssh/authorized keys - maybe not needed?
+1. apk add vim
+2. apk add mandoc man-pages
+3. apk add docker-cli-compose
+4. https://techoverflow.net/2021/05/07/how-to-install-docker-docker-compose-on-alpine-linux/
+
+0. Docker: https://wiki.alpinelinux.org/wiki/Docker
+1. WordPress: https://wiki.alpinelinux.org/wiki/WordPress
+	1.1 plus: php-fpm
+2. nginx: https://wiki.alpinelinux.org/wiki/Nginx
+3. mariadb: https://wiki.alpinelinux.org/wiki/MariaDB

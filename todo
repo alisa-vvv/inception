@@ -1,0 +1,5 @@
+1. make a user with my login, create the docker dir
+2. make (any) working Dockerfile
+3. make (any) working docker-compose.yml file
+4. make a makefile that runs the docker-compose.yml file
+5. make all those things comply with subject
