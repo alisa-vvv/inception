@@ -1,3 +1,4 @@
 *.pdf
 *.swp
+.env
 shared_folder/inception/secrets

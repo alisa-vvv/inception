@@ -1,4 +1,14 @@
 services:
   nginx:
     build:  ./requirements/nginx
-    ports:  [ "8080:80", ]
+    ports:  [ "443:443", ]
+    networks: [ "inception" ]
+  wordpress:
+    build:  ./requirements/wordpress
+    networks: [ "inception" ]
+  mariadb:
+    build: ./requirements/mariadb
+    networks: [ "inception" ]
+
+networks:
+  inception:
