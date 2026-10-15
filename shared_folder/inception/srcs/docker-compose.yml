@@ -8,7 +8,22 @@ services:
     networks: [ "inception" ]
   mariadb:
     build: ./requirements/mariadb
+    volumes:
+      - db-data:/var/lib/mysql
     networks: [ "inception" ]
+
+# driver - this tells docker-compose what "drives" the volume. local means the host machine does it
+# driver_opts - setings for the driver. "type: none" and "o: bind" are to make sure we can bind it
+#   to thedesired directory inside the container. o passes options, I don't know what type means.
+#   taken from the docker docs exmaple at https://docs.docker.com/reference/compose-file/volumes/.
+# device - absolute path to where we store the volume data
+volumes:
+  db-data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /home/avaliull/data
 
 networks:
   inception:

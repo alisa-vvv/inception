@@ -1,8 +1,11 @@
 #!/bin/sh
+# set -e tells the script to exit if a command fails
+set -e
+
 echo "hello, mariadb talking"
 if [ ! -d /var/lib/mysql/mysql ]; then
 	echo "making directory"
-	mariadb-isntall-db \
+	mariadb-install-db \
 		--user=mysql \
 		--datadir=/var/lib/mysql \
 		--skip-test-db

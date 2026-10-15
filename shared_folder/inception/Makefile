@@ -4,12 +4,16 @@ up:
 	docker compose --project-directory srcs up -d
 down:
 	docker compose --project-directory srcs down
-clean:
+reset:
+	$(MAKE) down
 	docker stop $$(docker ps -qa); \
 	docker rm $$(docker ps -qa); \
 	docker rmi -f $$(docker images -qa); \
 	docker volume rm $$(docker volume ls -q); \
 	docker network rm $$(docker network ls -q) 2>/dev/null
+clean-data:
+	cd /home/avaliull/data ; rm -rf *
+
 re:
 	$(MAKE) up
 	$(MAKE) down
