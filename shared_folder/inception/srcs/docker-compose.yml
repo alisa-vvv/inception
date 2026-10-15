@@ -6,6 +6,8 @@ services:
   wordpress:
     build:  ./requirements/wordpress
     networks: [ "inception" ]
+    volumes:
+      - wordpress-files:/var/www/html
   mariadb:
     build: ./requirements/mariadb
     volumes:
@@ -23,7 +25,13 @@ volumes:
     driver_opts:
       type: none
       o: bind
-      device: /home/avaliull/data
+      device: /home/avaliull/data/mariadb
+  wordpress-files:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /home/avaliull/data/wordpress
 
 networks:
   inception:

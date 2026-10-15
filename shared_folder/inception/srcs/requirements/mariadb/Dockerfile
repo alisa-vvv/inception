@@ -8,4 +8,8 @@ RUN mkdir -p /var/lib/mysql
 RUN chown -R mysql:mysql /run/mysqld /var/lib/mysql
 COPY init-db.sh /usr/local/bin/init-db.sh
 RUN chmod +x /usr/local/bin/init-db.sh
+
+# not sure if this is the correct way, CHECK
+EXPOSE 3306
+
 CMD [ "/usr/local/bin/init-db.sh" ]
