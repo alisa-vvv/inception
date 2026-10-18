@@ -26,3 +26,11 @@ What I've done:
 	1.1 plus: php-fpm
 2. nginx: https://wiki.alpinelinux.org/wiki/Nginx
 3. mariadb: https://wiki.alpinelinux.org/wiki/MariaDB
+
+
+
+
+.cnf files:
+https://mariadb.com/docs/server/server-management/install-and-upgrade-mariadb/configuring-mariadb/configuring-mariadb-with-option-files#option-groups
+options for .cnf files:
+https://mariadb.com/docs/server/server-management/variables-and-modes/server-system-variables

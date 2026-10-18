@@ -17,7 +17,6 @@ RUN apk add --no-cache php84-openssl
 RUN apk add --no-cache php84-xml
 RUN apk add --no-cache php84-zip
 RUN apk add --no-cache php84-phar
-
 RUN apk add --no-cache mysql-client
 
 # change workind directory to this. I believe this is the default wordpress directory
