@@ -15,6 +15,7 @@ services:
       - wordpress-files:/var/www/html
     depends_on:
       - mariadb
+    env_file: .env
     restart: unless-stopped
 
   mariadb:

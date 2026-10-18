@@ -10,11 +10,14 @@ bootstrap() {
 		--skip-test-db
 	exec mariadbd --user=mysql --bootstrap << EOF
 FLUSH PRIVILEGES;
-CREATE USER ${DB_USER}@'localhost' IDENTIFIED BY '${DB_PASSWORD}';
-GRANT ALL ON *.* TO ${DB_USER}@'localhost';
-CREATE DATABASE IF NOT EXISTS ${DB_NAME};
+CREATE USER ${DB_USER}@'%' IDENTIFIED BY '${DB_PASSWORD}';
+GRANT ALL ON *.* TO ${DB_USER}@'%' WITH GRANT OPTION;
+CREATE DATABASE ${DB_NAME};
+USE ${DB_NAME};
 FLUSH PRIVILEGES;
 EOF
+chown mysql:mysql /var/run/mysqld
+chmod 755 /var/run/mysqld
 }
 
 if [ ! -d /var/lib/mysql/mysql ]; then

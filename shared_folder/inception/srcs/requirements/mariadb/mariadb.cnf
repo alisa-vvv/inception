@@ -1,2 +1,7 @@
 [client-server]
-port = 3306
+port=3306
+user=mysql
+socket=/run/mysqld/mysqld.sock
+
+[mysqld]
+bind-address=0.0.0.0

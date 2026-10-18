@@ -29,6 +29,7 @@ RUN	wget -q https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli
 	&& mv wp-cli.phar /usr/local/bin/wp
 
 #this will set up wordrpress and launch it, same as nginx
+COPY php.ini /etc/php84/php.ini
 COPY wp_start-script.sh /usr/local/bin/wp_start-script.sh
 RUN chmod +x /usr/local/bin/wp_start-script.sh
 
