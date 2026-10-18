@@ -2,36 +2,21 @@ FROM	alpine:3.23.6
 # installing php-fpm and other necessary php packages.
 # taken from here: https://make.wordpress.org/hosting/handbook/server-environment/#php-extensions
 # not sure what php-phar does but saw it in onther icneptions
-#RUN	apk add --no-cache \
-#	php84 \
-#	php84-hash \
-#	php84-mysqli \
-#	php84-fpm \
-#	php84-curl \
-#	php84-dom \
-#	php84-exif \
-#	php84-fileinfo \
-#	php84-igbinary \
-#	php84-mbstring \
-#	php84-openssl \
-#	php84-xml \
-#	php84-zip \
-#	php84-phar
 
-RUN	apk add --no-cache php84
+RUN apk add --no-cache php84
 #RUN	apk add --no-cache php84-hash
-RUN	apk add --no-cache php84-mysqli
-RUN	apk add --no-cache php84-fpm
-RUN	apk add --no-cache php84-curl
-RUN	apk add --no-cache php84-dom
-RUN	apk add --no-cache php84-exif
-RUN	apk add --no-cache php84-fileinfo
+RUN apk add --no-cache php84-mysqli
+RUN apk add --no-cache php84-fpm
+RUN apk add --no-cache php84-curl
+RUN apk add --no-cache php84-dom
+RUN apk add --no-cache php84-exif
+RUN apk add --no-cache php84-fileinfo
 #RUN	apk add --no-cache php84-igbinary
-RUN	apk add --no-cache php84-mbstring
-RUN	apk add --no-cache php84-openssl
-RUN	apk add --no-cache php84-xml
-RUN	apk add --no-cache php84-zip
-RUN	apk add --no-cache php84-phar
+RUN apk add --no-cache php84-mbstring
+RUN apk add --no-cache php84-openssl
+RUN apk add --no-cache php84-xml
+RUN apk add --no-cache php84-zip
+RUN apk add --no-cache php84-phar
 
 RUN apk add --no-cache mysql-client
 

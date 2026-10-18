@@ -16,7 +16,7 @@ reset:
 	docker volume rm $$(docker volume ls -q); \
 	docker network rm $$(docker network ls -q) 2>/dev/null
 
-clean-data:
+nuke:
 	rm -rf $(DATA_DIR_WP) $(DATA_DIR_MARIADB)
 
 re:

@@ -1,18 +1,29 @@
 services:
   nginx:
     build:  ./requirements/nginx
-    ports:  [ "443:443", ]
+    ports:  [ "443:443" ]
     networks: [ "inception" ]
+    depends_on:
+      - mariadb
+      - wordpress
+    restart: unless-stopped
+
   wordpress:
     build:  ./requirements/wordpress
     networks: [ "inception" ]
     volumes:
       - wordpress-files:/var/www/html
+    depends_on:
+      - mariadb
+    restart: unless-stopped
+
   mariadb:
     build: ./requirements/mariadb
     volumes:
       - db-data:/var/lib/mysql
+    env_file: .env
     networks: [ "inception" ]
+    restart: unless-stopped
 
 # driver - this tells docker-compose what "drives" the volume. local means the host machine does it
 # driver_opts - setings for the driver. "type: none" and "o: bind" are to make sure we can bind it
