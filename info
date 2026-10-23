@@ -34,3 +34,8 @@ What I've done:
 https://mariadb.com/docs/server/server-management/install-and-upgrade-mariadb/configuring-mariadb/configuring-mariadb-with-option-files#option-groups
 options for .cnf files:
 https://mariadb.com/docs/server/server-management/variables-and-modes/server-system-variables
+
+
+
+openssl - for setting up private key and certificate
+https://docs.openssl.org/master/man1/openssl-req/#options
