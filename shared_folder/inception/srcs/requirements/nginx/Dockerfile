@@ -7,5 +7,7 @@ RUN mkdir -p /etc/ssl/certs
 RUN openssl req -x509 -newkey rsa:4096 -keyout /etc/ssl/private/incept_key.pem \
 	-out /etc/ssl/certs/incept_cert.pem -sha256 \
 	-noenc -subj "/CN=avaliull.42.fr"
+RUN chmod +r /etc/ssl/private/incept_key.pem
+RUN chmod +r /etc/ssl/certs/incept_cert.pem
 EXPOSE 443
 CMD [ "nginx", "-g", "daemon off;" ]

@@ -20,6 +20,7 @@ What I've done:
 4. apk add curl
 5. apk add docker-cli-compose
 6. https://techoverflow.net/2021/05/07/how-to-install-docker-docker-compose-on-alpine-linux/
+7. edit /etc/hosts to add the proper domain
 
 0. Docker: https://wiki.alpinelinux.org/wiki/Docker
 1. WordPress: https://wiki.alpinelinux.org/wiki/WordPress
