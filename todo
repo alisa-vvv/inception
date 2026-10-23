@@ -1,5 +1,2 @@
-1. check if i have a user with my login
-2. make a configuration for the mariadb database
-3. make a configuration for wordpress website
-4. make a configuration for nginx
-oo. make all those things comply with subject
+1. fix error when doing make down -> make up
+2. fix an (i assume related) issue with 502 bad gateway
