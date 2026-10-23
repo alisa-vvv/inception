@@ -39,3 +39,6 @@ https://mariadb.com/docs/server/server-management/variables-and-modes/server-sys
 
 openssl - for setting up private key and certificate
 https://docs.openssl.org/master/man1/openssl-req/#options
+
+nginx for wordpress
+https://developer.wordpress.org/advanced-administration/server/web-server/nginx/
